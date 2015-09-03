@@ -1,0 +1,90 @@
+SPARQL queries and results:
+
+----------------------------------------------------------
+
+Namespaces:
+BASE <http://example.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rel: <http://www.perceive.net/schemas/relationship/>
+
+----------------------------------------------------------
+
+1.
+query:
+
+SELECT (Concat(?lastName, " ", ?firstName) AS ?fullName)
+WHERE {
+  ?my foaf:lastName ?lastName ;
+      foaf:firstName ?firstName
+}
+
+result:
+
+fullName
+"Xiao Yanhao"
+
+----------------------------------------------------------
+
+2.
+query:
+
+CONSTRUCT {
+  ?web foaf:page ?address
+}
+WHERE {
+  ?my ?web ?address 
+  FILTER regex(?address, "^https://")
+}
+
+result:
+
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rel:   <http://www.perceive.net/schemas/relationship/> .
+@prefix ns0:   <http://www.perceive.net/schemas/relationship/> .
+@prefix ns1:   <http://example.org/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+foaf:img  foaf:page  "https://avatars2.githubusercontent.com/u/9431557?v=3&s=400" .
+
+foaf:homepage  foaf:page  "https://github.com/xiaoyanhao" .
+
+----------------------------------------------------------
+
+3.
+query:
+
+SELECT ?favorite
+WHERE {
+  ?my <favoriteFood>|<favoriteMovie>|<favoriteSport>|<favoriteActor> ?favorite 
+}
+ORDER BY ASC(?favorite)
+
+result:
+
+favorite
+"Batman"
+"Breaking dance"
+"Christian Bale"
+"Mango"
+
+----------------------------------------------------------
+
+4.
+query:
+
+SELECT DISTINCT ?s
+WHERE {
+  ?s ?p ?o
+  MINUS {
+    ?s ?p ?o
+    FILTER NOT EXISTS {
+      foaf:PersonalProfileDocument ?p ?o   
+    }
+  }
+}
+
+result:
+
+s
+foaf:PersonalProfileDocument

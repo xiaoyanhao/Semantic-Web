@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:ns0="http://www.perceive.net/schemas/relationship/"
+         xmlns:ns1="http://example.org/">
+
+  <foaf:Person rdf:about="http://xmlns.com/foaf/0.1/PersonalProfileDocument">
+    <foaf:title>Mr</foaf:title>
+    <foaf:firstName>Yanhao</foaf:firstName>
+    <foaf:lastName>Xiao</foaf:lastName>
+    <foaf:mbox>xiaoyh5@mail2.sysu.edu.cn</foaf:mbox>
+    <foaf:homepage>https://github.com/xiaoyanhao</foaf:homepage>
+    <foaf:img>https://avatars2.githubusercontent.com/u/9431557?v=3&amp;s=400</foaf:img>
+    <foaf:phone>18819473337</foaf:phone>
+    <foaf:knows>
+      <rdf:Description>
+        <foaf:Person>
+          <rdf:Description>
+            <ns0:familyOf rdf:resource="http://example.org/myself"/>
+            <ns0:friendOf rdf:resource="http://example.org/myself"/>
+            <ns0:schoolmateOf rdf:resource="http://example.org/myself"/>
+            <ns0:colleagueOf rdf:resource="http://example.org/myself"/>
+          </rdf:Description>
+        </foaf:Person>
+
+      </rdf:Description>
+    </foaf:knows>
+
+    <ns1:favoriteFood>mango</ns1:favoriteFood>
+    <ns1:favoriteMovie>Batman</ns1:favoriteMovie>
+    <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</foaf:age>
+    <foaf:weblog>http://weibo.com/u/5238315627</foaf:weblog>
+    <ns1:favoriteSport>breaking dance</ns1:favoriteSport>
+    <ns1:favoriteActor>Christian Bale</ns1:favoriteActor>
+    <ns1:wishAtCollege>Meet one good girl</ns1:wishAtCollege>
+  </foaf:Person>
+
+</rdf:RDF>

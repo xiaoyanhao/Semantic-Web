@@ -1,0 +1,32 @@
+@base <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .
+
+foaf:PersonalProfileDocument
+  foaf:title 'Mr' ;
+  foaf:firstName 'Yanhao' ;
+  foaf:lastName 'Xiao' ;
+  foaf:mbox 'xiaoyh5@mail2.sysu.edu.cn' ;
+  foaf:homepage 'https://github.com/xiaoyanhao' ;
+  foaf:img 'https://avatars2.githubusercontent.com/u/9431557?v=3&s=400' ;
+  foaf:phone '18819473337' ;
+  foaf:knows [
+    foaf:Person [
+      rel:familyOf <myself> ;
+      rel:friendOf <myself> ;
+      rel:schoolmateOf <myself> ;
+      rel:colleagueOf <myself>
+    ]
+  ] ;
+  <favoriteFood> 'mango' ;
+  <favoriteMovie> 'Batman' ;
+
+  # additional personal information
+  a foaf:Person ;
+  foaf:age 21 ;
+  foaf:weblog 'http://weibo.com/u/5238315627' ;
+  <favoriteSport> 'breaking dance' ;
+  <favoriteActor> 'Christian Bale' ;
+  <wishAtCollege> 'Meet one good girl' .
