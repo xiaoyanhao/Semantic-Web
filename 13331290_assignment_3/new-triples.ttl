@@ -1,0 +1,13 @@
+@prefix : <http://example.org/term/> .
+@prefix i: <http://example.org/inst/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# New RDFS-inferred triples about Museion :
+i:Museion a :artMuseum .
+i:Museion a :museum .
+i:Museion a :tourismAttraction .
+
+# New RDFS-inferred triples about ChickenHut :
+i:ChickenHut :hasRating 3.5 .
+i:ChickenHut a :tourismObject .
+i:ChickenHut a rdfs:Resource .

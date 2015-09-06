@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns0="http://example.org/term/">
+
+  <rdf:Description rdf:about="http://example.org/term/museum">
+    <rdfs:subClassOf rdf:resource="http://example.org/term/tourismAttraction"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/term/artMuseum">
+    <rdfs:subClassOf rdf:resource="http://example.org/term/museum"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/term/modernArtMuseum">
+    <rdfs:subClassOf rdf:resource="http://example.org/term/artMuseum"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/term/historyMuseum">
+    <rdfs:subClassOf rdf:resource="http://example.org/term/museum"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/term/landmark">
+    <rdfs:subClassOf rdf:resource="http://example.org/term/tourismAttraction"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/term/outdoorSpot">
+    <rdfs:subClassOf rdf:resource="http://example.org/term/tourismAttraction"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/term/amusementPark">
+    <rdfs:subClassOf rdf:resource="http://example.org/term/tourismAttraction"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/term/restaurant">
+    <rdfs:subClassOf rdf:resource="http://example.org/term/tourismObject"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/term/hotel">
+    <rdfs:subClassOf rdf:resource="http://example.org/term/tourismObject"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/term/hasTripAdvisorRating">
+    <rdfs:domain rdf:resource="http://example.org/term/tourismObject"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/term/hasRating"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/term/hasHotel">
+    <rdfs:range rdf:resource="http://example.org/term/hotel"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/inst/Museion">
+    <rdf:type rdf:resource="http://example.org/term/modernArtMuseum"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/inst/ChickenHut">
+    <ns0:hasTripAdvisorRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.5</ns0:hasTripAdvisorRating>
+  </rdf:Description>
+
+</rdf:RDF>

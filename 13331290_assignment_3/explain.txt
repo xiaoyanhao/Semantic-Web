@@ -1,0 +1,22 @@
+1. New RDFS-inferred triples about Museion
+
+We know the fact as follows
+:museum rdfs:subClassOf :tourismAttraction .
+:artMuseum rdfs:subClassOf :museum .
+:modernArtMuseum rdfs:subClassOf :artMuseum .
+
+Since the rdfs:subClassOf property is transitive,
+and Museion is a modern art museum, thus we can infer
+that Museion is also an art museum, a museum, a tourism attraction.
+
+
+2. New RDFS-inferred triples about ChickenHut
+
+We know the fact as follows
+:hasTripAdvisorRating rdfs:domain :tourismObject .
+:hasTripAdvisorRating rdfs:subPropertyOf :hasRating .
+
+According to the property restrictions, 
+the TripAdvisor rating of Chicken Hut is 3.5,
+so the TripAdvisor rating of Chicken Hut is a tourism object (rdfs:Resource)
+and the rating of Chicken Hut is also 3.5.
