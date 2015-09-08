@@ -1,0 +1,48 @@
+1.
+graduateStudent ⊑ Person ⊓ ∃isStudentOf.Organization
+A graduate student is a person and a student of some organization.
+
+2.
+baseballFan ⊑ Person ⊓ ∃like.Baseball
+A baseball fan is a person and likes baseball.
+
+3.
+baseballFan ⊑ Person ⊓ ∃isCrazyAbout.Sports
+A baseball fan is a person and is crazy about some sports.
+
+4.
+basketballFan ⊑ Person ⊓ ∃like.Basketball
+A basketball fan is a person and likes basketball.
+
+5.
+basketballFan ⊑ Person ⊓ ∃isCrazyAbout.Sports
+A basketball fan is a person and is crazy about some sports.
+
+6.
+director ⊑ Person ⊓ ∃worksFor.organization
+A director is a person and works for some organization.
+
+7.
+peopleWhoLikeSports ⊑ Person ⊓ ∃like.Thing
+People who like sports is a person who likes at least one thing.
+
+8.
+swimmingFan ⊑ Person ⊓ ∃like.Swimming
+A swimming fan is a person and likes swimming.
+
+9.
+swimmingFan ⊑ Person ⊓ ∃isCrazyAbout.Sports
+A swimming fan is a person and is crazy about some sports.
+
+10.
+tennisFan ⊑ Person ⊓ ∃isCrazyAbout.Sports
+A tennis fan is a person and is crazy about some sports.
+
+11.
+universityResearchAssistant ⊑ Person ⊓ ∃worksFor.organization
+A university research assistant is a person and works for some organization.
+
+12.
+sportsFan ⊑ Person ⊓ ∃like.Sports
+A sports fan is a person and likes some sports.
+
